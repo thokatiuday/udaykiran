@@ -16,9 +16,15 @@ def education(request):
     template = loader.get_template('education.html')
     data = {
         'courses' : [
-            {'name' : 'Samskruthi eng. College','course' : 'B Tech (Data science) (2021-2025)','percentage' : '7.0',},
-            {'name' : 'SriSandepani jr. college','course' : 'Intermediate (2019-2021)','percentage' : '6.5',},
-            {'name' : 'Kanthi high school','course' : 'SSC (2009-2019)','percentage' : '9.8',},
+            {'name' : 'Samskruthi eng. College',
+             'course' : 'B Tech (Data science) (2021-2025)',
+             'percentage' : '7.0',},
+            {'name' : 'vignan jr college',
+             'course' : 'Intermediate (2019-2021)',
+             'percentage' : '9.2',},
+            {'name' : 'sri narayana global high school',
+             'course' : 'SSC (2009-2019)',
+             'percentage' : '8.3',},
         ]
     }
     return HttpResponse(template.render(data,request))
@@ -67,16 +73,13 @@ def skills(request):
                     'html','css','js','bootstrap',
                     'git','github','githubactions',
                     'mysql','postgres','sqlite','mongodb',
-                    'opencv','pandas','numpy','pytorch',
-                    'php','c','cpp','java',
-                    'docker','aws',
-                    'react',
                     'vercel','netlify',
                 ],
         'soft_skills' : [
                     'speaking english',
                     'Teamwork',
                     'Dedication',
+                    'edting',
                 ]
     }
     return HttpResponse(template.render(data,request))
