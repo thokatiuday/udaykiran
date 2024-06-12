@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+    <head>
+        {% block style-element %}
+            <style>
+                #element-6 {
+                    background-color: lightgreen;
+                    color: #000;
+                    padding: 2px;
+                }
+                #element-6:hover {
+                    background-color: green;
+                    color: #fff;
+                }
+                .main {
+                    max-width:500px;
+                }
+            </style>
+        {% endblock style-element %}
+    </head>
+    <body>
+        {% block main-content %}
+            <div class="social">    
+                <h1>Social-Links</h1>
+                <hr>
+                {% for soc in social %}
+                    <a href="{{soc.link}}" target="_blank">
+                        <div class="container">
+                            <img src="https://go-skill-icons.vercel.app/api/icons?i={{soc.link_logo}}" alt="{{soc.link_logo}}">
+                        </div>
+                    </a>
+                {% endfor %}
+            </div>
+            <script>
+                const element = document.getElementById("element-8");
+                element.scrollIntoView();
+            </script>
+        {% endblock main-content %}
+    </body>

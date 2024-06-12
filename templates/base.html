@@ -1,0 +1,73 @@
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dineshreddpy paidi</title>
+    <link rel="icon" href={% static "img/dinesh.jpg" %}>
+    <link rel="stylesheet" href={% static "css/style.css" %}>
+    {% block stylesheet %}{% endblock stylesheet %}
+    {% block style-element %}
+    
+    {% endblock style-element %}
+</head>
+<body>
+    <header id="header">
+        <div class="img-and-occ">
+            <img src={% static "img/dinnu.jpg" %} alt="Dineshreddy" id="profilepic">
+            <h2>Data scientist</h2>
+        </div>
+    </header>
+    <div class="navigation-bar" id="nav">
+        <a href="/">
+            <div class="container" id="element-1">
+                <h3>Intro</h3>
+            </div>
+        </a>
+        <a href="/skills/">
+            <div class="container" id="element-2">
+                <h3>Skills</h3>
+            </div>
+        </a>
+        <a href="/projects/">
+            <div class="container" id="element-3">
+                <h3>Projects</h3>
+            </div>
+        </a>
+        <a href="/learning/">
+            <div class="container" id="element-4">
+                <h3>LearningPath</h3>
+            </div>
+        </a>
+        <a href="/education/">
+            <div class="container" id="element-5">
+                <h3>Education</h3>
+            </div>
+        </a>
+        <a href="/social/">
+            <div class="container" id="element-6">
+                <h3>SocialLinks</h3>
+            </div>
+        </a>
+        <a href="/resume/">
+            <div class="container" id="element-7">
+                <h3>Resume's</h3>
+            </div>
+        </a>
+        <a href="/contact/">
+            <div class="container" id="element-8">
+                <h3>Contact</h3>
+            </div>
+        </a>
+
+    </div>
+    <div class="main">
+        {% block main-content %}
+        
+        {% endblock main-content %}
+    </div>
+    <fotter>&copy;Dineshreddy</fotter>
+    <script src={% static "js/index.js" %}></script>
+    <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
+</body>
+</html>

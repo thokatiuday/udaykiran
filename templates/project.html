@@ -1,0 +1,48 @@
+<html>
+    {% load static %}
+    <head>
+        <link rel="stylesheet" href={% static "css/project.css" %}>
+    </head>
+    <body>
+        <div class="container">
+            <u><h1>{{project.project_name}}</h1></u>
+            <div class="links">
+                {% if project.deployed_link %}
+                    <a href="{{project.deployed_link}}">
+                        <h2>Deployment-link</h2>
+                    </a>
+                {% else %}
+                    <a href="#"></a>
+                {% endif %}
+                <a href="{{project.github_link}}">
+                   <img src="https://skillicons.dev/icons?i=github">
+                </a>
+            </div>
+            <div class="center">
+                <div class="images">
+                    {% if image %}
+                        <img src= "/media/{{image.image}}" alt={{project.project_name}}>
+                    {% else %}
+                        <img src="https://skillicons.dev/icons?i=git">
+                    {% endif %}
+                </div>
+            </div>
+            <h2>Skills-Used</h2>
+            <hr>
+            <div class="skills">
+                {% for skill in skills %}
+                    <img src="https://skillicons.dev/icons?i={{skill.skills_used}}" alt="{{skill.skills_used}}">
+                {% endfor %}
+            </div>
+            <br>
+            <h2>Description</h2>
+            <hr>
+            <h4>{{project.description}}</h4>
+            <ul>
+                {% for point in points %}
+                    <p><li>{{point.key_points}}</p></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </body>
+</html>

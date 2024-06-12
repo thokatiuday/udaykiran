@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% load static %}
+    <head>
+        {% block stylesheet %}
+            <link rel="stylesheet" href={% static "css/contact.css" %}>
+        {% endblock stylesheet %}
+        {% block style-element %}
+            <style>
+                #element-8 {
+                    background-color: lightgreen;
+                    color: #000;
+                    padding: 2px;
+                }
+                #element-8:hover {
+                    background-color: green;
+                    color: #fff;
+                }
+            </style>
+        {% endblock style-element %}
+    </head>
+    <body>
+        {% block main-content %}
+        <div class="contact">    
+            <h1>Contact-Me</h1>
+            <hr>
+            <section class="formcarry-container">
+                <form action="https://formcarry.com/s/uOGK6HP1SL-" method="POST" enctype="multipart/form-data">
+                  
+                  <div class="formcarry-block">
+                    <label for="fc-generated-1-name">Full Name</label>
+                    <input type="text" name="name" id="fc-generated-1-name" placeholder="Your first and last name" />
+                  </div>
+                    
+                  <div class="formcarry-block">
+                    <label for="fc-generated-1-email">Your Email Address</label>
+                    <input type="email" name="email" id="fc-generated-1-email" placeholder="john@doe.com" />
+                  </div>
+                    
+                  <div class="formcarry-block">
+                    <label for="fc-generated-1-message">Your message</label>
+                    <textarea name="message" name="message" id="fc-generated-1-message" placeholder="Enter your message..."></textarea>
+                  </div>
+                    
+                  <div class="formcarry-block">  
+                    <button type="submit">Send</button>
+                  </div>
+                
+                </form>
+            </section>
+        </div>
+        <script>
+            const element = document.getElementById("element-8");
+            element.scrollIntoView();
+        </script>
+        {% endblock main-content %}
+    </body>

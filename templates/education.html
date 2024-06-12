@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+    <head>
+        {% block style-element %}
+            <style>
+                #element-5 {
+                    background-color: lightgreen;
+                    color: #000;
+                    padding: 2px;
+                }
+                #element-5:hover {
+                    background-color: green;
+                    color: #fff;
+                }
+                .main{
+                    max-width:500px;
+                }
+            </style>
+        {% endblock style-element %}
+    </head>
+    <body>
+        {% block main-content %}
+            <div class="education">
+                <h1>education</h1>
+                <hr>
+                <div class="container">
+                    <div class="line">
+                    </div>
+                    <div class="block-all">
+                        {% for course in courses %}
+                            <div class="block">
+                                <h2>{{course.name}}</h2>
+                                <h3>{{course.course}}</h3>
+                                <p>GPA ==> {{course.percentage}}</p>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>  
+            </div>
+            <script>
+                const element = document.getElementById("element-6");
+                element.scrollIntoView();
+            </script>
+        {% endblock main-content %}
+    </body>

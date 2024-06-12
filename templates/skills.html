@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+    <head>
+        {% block style-element %}
+            <style>
+                #element-2 {
+                    background-color: lightgreen;
+                    color: #000;
+                    padding: 2px;
+                }
+                #element-2:hover {
+                    background-color: green;
+                    color: #fff;
+                }
+                .main{
+                    max-width:700px;
+                }
+            </style>
+        {% endblock style-element %}
+    </head>
+    <body>
+        {% block main-content %}
+        <div class="skills">    
+            <h1>My - Skills</h1>
+            <hr>
+            <u><h3>Technical-skills</h3></u>
+            <div class="skills-all">
+                <a href="https://github.com/dineshreddypaidi">
+                    {% for skill in skills %}
+                        <img src="https://go-skill-icons.vercel.app/api/icons?i={{skill}}">
+                    {% endfor %}
+                </a>
+            </div>
+            <u><h3>Soft-skills</h3></u>
+            <div class="skills-all">
+                <ul>
+                    {% for skill in soft_skills %}
+                        <li><h4>{{skill}}</h4></li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        <script>
+            const element = document.getElementById("element-2");
+            element.scrollIntoView();
+        </script>
+        {% endblock main-content %}
+    </body>

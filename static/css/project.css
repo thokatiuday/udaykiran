@@ -1,0 +1,114 @@
+body {
+    margin-top: 0px;
+    line-height: 1.6;
+    background-color: #f2f3f4;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    height:fit-content;
+    width: 95%;
+    max-width: 600px;
+    margin-left: 2%;
+    margin-top: 30px;
+    background-color: #fff;
+    border: 1px solid #333;
+    border-radius: 10px;
+}
+.container h1 {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 2px;
+}
+.container .links {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin-left: 10%;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    background-color: aliceblue;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px azure;
+}
+.container .links a {
+    text-decoration: none;
+    
+}
+.container .links a h2 {
+    font-size: 20px;
+    color: #000;
+    text-decoration:underline;
+    border-bottom: 15px;
+}
+.container .links a img {
+    height: 40px;
+    width: 40px;
+    margin-top: 4px;
+    margin-right: 5px;
+}
+.container .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.container .center .images {
+    height: 300px;
+    width: 300px;
+    margin-left: 2%;
+    border:1px solid #252525;
+    background-color: #252525;
+    border-radius: 10px;
+}
+.container .center .images  img {
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    object-fit: contain;
+}
+.container h2 {
+    margin-top: 15px;
+    margin-left: 15px;
+    margin-bottom: 0px;
+}
+.container hr {
+    width: 95%;
+    margin-top: 0px;
+    border: 2px solid  rgba(36, 36, 36, 0.1);
+}
+.container .skills {
+    margin-top: 18px;
+    margin-left: 3%;
+    margin-bottom: 20px;
+    height:fit-content;
+    display: flex;
+    width: 95%;
+    border-radius: 7px;
+    box-shadow: 2px 2px 5px orange;
+}
+.container .skills img {
+    height: 60px;
+    width: 60px;
+    margin: 5px;
+    padding: 5px;
+    transition: padding 0.5 ease;
+}
+.container .skills img:hover {
+    padding: 10px;
+    background-color: aliceblue;
+    height: 50px;
+    width: 50px;
+}
+.container h4 {
+    margin-top: 5px;
+    margin-left: 10px;
+    font-size: 18px;
+    padding: 8px;
+    font-family:monospace;
+    font-weight: bold;
+    margin-bottom: 2px;
+}

@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% load static %}
+    <head>
+        {% block style-element %}
+            <style>
+                #element-3 {
+                    background-color: lightgreen;
+                    color: #000;
+                    padding: 2px;
+                }
+                #element-3:hover {
+                    background-color: green;
+                    color: #fff;
+                }
+                .main {
+                    max-width:500px;
+                }
+            </style>
+        {% endblock style-element %}
+    </head>
+    <body>
+        {% block main-content %}
+            <div class="project">    
+                <h1>Projects</h1>
+                <hr>
+                {% for project in projects %}
+                    <a href="{{project.project_id}}">
+                    <div class="container">
+                        <img src="https://logos.flamingtext.com/Name-Logos/Project-design-sketch-name.png" alt="{{project.project_name}}">
+                        <div class="block">
+                            <h3>{{project.project_name}}</h3>
+                            <hr>
+                            <p>{{project.short_description}}</p>
+                        </div>
+                    </div>
+                    </a>
+                {% endfor %}
+            </div>
+            <script>
+                const element = document.getElementById("element-4");
+                element.scrollIntoView();
+            </script>
+        {% endblock main-content %}
+    </body>
