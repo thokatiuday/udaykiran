@@ -30,8 +30,8 @@ class project_points(models.Model):
     project_id = models.ForeignKey(project,on_delete=models.CASCADE)
     key_points = models.TextField()
     
-    #def __str__(self) -> str:
-       # return f'{self.project_id.project_id} --> {self.key_points[0:30]}'
+    def __str__(self) -> str:
+       return f'{self.project_id.project_id} --> {self.key_points[0:30]}'
 
 class social_links(models.Model):
     link_logo = models.CharField(max_length=100)

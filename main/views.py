@@ -72,8 +72,6 @@ def skills(request):
                     'py','django',
                     'html','css','js','bootstrap',
                     'git','github','githubactions',
-                    'mysql','postgres','sqlite','mongodb',
-                    'vercel','netlify',
                 ],
         'soft_skills' : [
                     'speaking english',
